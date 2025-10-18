@@ -36,43 +36,42 @@ const molekulaAdatok = {
 
 const osszesCsoport = [...new Set(Object.values(molekulaAdatok).map(m => m.csoport))];
 // Függvények frissítése
-	    
-const novenyAdatok = {
-    "Aurantii amari epicarpium et mesocarpium": { magyardrog: "Keserű narancs epikarpium és mezokarpium", latin: "Citrus aurantium", csalad: "Rutaceae", kep: "Aurantii_amari_epicarpium_et_mesocarpium.jpg" },
-    "Betulae folium": { magyardrog: "Nyírfa levél", latin: "Betula pendula", csalad: "Betulaceae", kep: "Betulae_folium.jpg" },
-    "Crataegi folium cum flore": { magyardrog: "Galagonya virágos hajtásvég", latin: "Crataegus monogyna", csalad: "Rosaceae", kep: "Crataegi_folium_cum_flore.jpg" },
-    "Curcumae longae rhizoma": { magyardrog: "Kurkuma gyökértörzs", latin: "Curcuma longa", csalad: "Zingiberaceae", kep: "Curcumae_longae_rhizoma.jpg" },
-    "Echinaceae purpurea herba": { magyardrog: "Bíbor kasvirág virágos hajtás", latin: "Echinacea purpurea", csalad: "Asteraceae", kep: "Echinaceae_purpurea_herba.jpg" },
-    "Ginkgonis folium": { magyardrog: "Páfrányfenyőlevél", latin: "Ginkgo biloba", csalad: "Ginkgoaceae", kep: "Ginkgonis_folium.jpg" },
-    "Hyperici herba": { magyardrog: "Közönséges orbáncfű virágos hajtás", latin: "Hypericum perforatum", csalad: "Hypericaceae", kep: "Hyperici_herba.jpg" },
-    "Meliloti herba": { magyardrog: "Orvosi somkóró virágos hajtás", latin: "Melilotus officinalis", csalad: "Fabaceae", kep: "Meliloti_herba.jpg" },
-    "Melissae folium": { magyardrog: "Citromfű levél", latin: "Melissa officinalis", csalad: "Lamiaceae", kep: "Melissae_folium.jpg" },
-    "Myrtilli fructus siccus": { magyardrog: "Szárított fekete áfonya termés", latin: "Vaccinium myrtillus", csalad: "Ericaceae", kep: "Myrtilli_fructus_siccus.jpg" },
-    "Rosmarini folium": { magyardrog: "Rozmaring levél", latin: "Rosmarinus officinalis", csalad: "Lamiaceae", kep: "Rosmarini_folium.jpg" },
-    "Sambuci flos": { magyardrog: "Fekete bodza virág", latin: "Sambucus nigra", csalad: "Adoxaceae", kep: "Sambuci_flos.jpg" },
-    "Silybi mariani fructus": { magyardrog: "Máriatövis termés", latin: "Silybum marianum", csalad: "Asteraceae", kep: "Silybi_mariani_fructus.jpg" },
-    "Solidaginis herba": { magyardrog: "Kanadai és magas aranyvessző virágos hajtás", latin: "Solidago virgaurea", csalad: "Asteraceae", kep: "Solidaginis_herba.jpg" },
-    "Tiliae flos": { magyardrog: "Hársfa virág", latin: "Tilia cordata", csalad: "Malvaceae", kep: "Tiliae_flos.jpg" },
-    "Uvae ursi folium": { magyardrog: "Orvisi medveszőlő levél", latin: "Arctostaphylos uva-ursi", csalad: "Ericaceae", kep: "Uvae_ursi_folium.jpg" },
-    "Ononidis radix": { magyardrog: "Tövises iglice gyökér", latin: "Ononis spinosa", csalad: "Fabaceae", kep: "Ononidis_radix.jpg" },
-    "Agrimoniae herba": { magyardrog: "Közönséges párlógű virágos hajtás", latin: "Agrimonia eupatoria", csalad: "Rosaceae", kep: "Agrimoniae_herba.jpg" },
-    "Camelliae sinensis folium non fermentatum": { magyardrog: "Kínai teacserje nem fermentált levél", latin: "Camellia sinensis", csalad: "Theaceae", kep: "Camelliae_sinensis_folium_non_fermentatum.jpg" },
-    "Cannabis herba": { magyardrog: "Kender levél", latin: "Cannabis sativa", csalad: "Cannabaceae", kep: "Cannabis_herba.jpg" },
-    "Galla": { magyardrog: "Gubacs", latin: "Quercus infectoria", csalad: "Fagaceae", kep: "Galla.jpg" },
-    "Lupuli flos": { magyardrog: "Komlótoboz", latin: "Humulus lupulus", csalad: "Cannabaceae", kep: "Lupuli_flos.jpg" },
-    "Quercus cortex": { magyardrog: "Tölgyfakéreg", latin: "Quercus robur", csalad: "Fagaceae", kep: "Qercus_cortex.jpg" },
-    "Rhamni purshianae cortex": { magyardrog: "Kaszkarabokor kéreg", latin: "Rhamnus purshiana", csalad: "Rhamnaceae", kep: "Rhamni_purshianae_cortex.jpg" },
-    "Rhei radix": { magyardrog: "Tenyeres és orvosi rebarbara gyökér", latin: "Rheum palmatum", csalad: "Polygonaceae", kep: "Rhei_radix.jpg" },
-    "Sennae fructus": { magyardrog: "Szennatermés", latin: "Senna alexandrina", csalad: "Fabaceae", kep: "Sennae_fructus.jpg" },
-    "Vaccini macrocarpi fructus": { magyardrog: "Nagy bogyós áfonya termés", latin: "Vaccinium macrocarpon", csalad: "Ericaceae", kep: "Vaccini_macrocarpi_fructus.jpg" },
-    "Alchemillae herba": { magyardrog: "Réti palástfű", latin: "Alchemilla vulgaris", csalad: "Rosaceae", kep: "Alchemillae_herba.jpg" },
-    "Aloe capensis": { magyardrog: "Tövises aloé", latin: "Aloe ferox", csalad: "Asphodelaceae", kep: "Aloe_capensis.jpg" },
-    "Frangulae cortex": { magyardrog: "Kutyabengekéreg", latin: "Rhamnus frangula", csalad: "Rhamnaceae", kep: "Frangulae_cortex.jpg" },
-    "Ratanhiae radix": { magyardrog: "Ratanhia gyökér", latin: "Krameria lappacea", csalad: "Krameriaceae", kep: "Ratanhiae_radix.jpg" },
-    "Cotini folium": { magyardrog: "Cserszömörce levél", latin: "Cotinus coggygria", csalad: "Anacardiaceae", kep: "Cotini_folium.jpg" },
-    "Sennae foliolum": { magyardrog: "Szenna levélke", latin: "Senna alexandrina", csalad: "Fabaceae", kep: "Sennae_foliolum.jpg" }
-};
 
+const novenyAdatok = {
+    "Absinthii herba": { magyardrog: "Fehér üröm virágos hajtás", latin: "Artemisia absinthium", csalad: "Asteraceae", kep: "Absinthii_herba.jpg" },
+    "Anisi fructus": { magyardrog: "Ánizstermés", latin: "Pimpinella anisum", csalad: "Apiaceae", kep: "Anisi_fructus.jpg" },
+    "Calendulae flos": { magyardrog: "Körömvirág virág", latin: "Calendula officinalis", csalad: "Asteraceae", kep: "Calendulae_flos.jpg" },
+    "Cardui benedicti herba": { magyardrog: "Benedekfű virágos hajtás", latin: "Cnicus benedictus", csalad: "Asteraceae", kep: "Cardui_benedicti_herba.jpg" },
+    "Carvi fructus": { magyardrog: "Köménymag", latin: "Carum carvi", csalad: "Apiaceae", kep: "Carvi_fructus.jpg" },
+    "Caryophylli flos": { magyardrog: "Szegfűszeg", latin: "Syzygium aromaticum", csalad: "Myrtaceae", kep: "Caryophylli_flos.jpg" },
+    "Centaurii herba": { magyardrog: "Kis ezerjófű virágos hajtás", latin: "Centaurium erythraea", csalad: "Gentianaceae", kep: "Centaurii_herba.jpg" },
+    "Cinnamomi cortex": { magyardrog: "Fahéjkéreg", latin: "Cinnamomum verum", csalad: "Lauraceae", kep: "Cinnamomi_cortex.jpg" },
+    "Convallariae folium": { magyardrog: "Gyöngyvirág levél", latin: "Convallaria majalis", csalad: "Asparagaceae", kep: "Convallariae_folium.jpg" },
+    "Coriandri fructus": { magyardrog: "Koriandermag", latin: "Coriandrum sativum", csalad: "Apiaceae", kep: "Coriandri_fructus.jpg" },
+    "Digitalis lanatae folium": { magyardrog: "Gyapjas gyűszűvirág levél", latin: "Digitalis lanata", csalad: "Plantaginaceae", kep: "Digitalis_lanatae_folium.jpg" },
+    "Digitalis purpureae folium": { magyardrog: "Piros gyűszűvirág levél", latin: "Digitalis purpurea", csalad: "Plantaginaceae", kep: "Digitalis_purpureae_folium.jpg" },
+    "Foeniculi dulcis fructus": { magyardrog: "Édeskömény termés", latin: "Foeniculum vulgare var. dulce", csalad: "Apiaceae", kep: "Foeniculi_dulcis_fructus.jpg" },
+    "Gentianae radix": { magyardrog: "Tárnicsgyökér", latin: "Gentiana lutea", csalad: "Gentianaceae", kep: "Gentianae_radix.jpg" },
+    "Ginseng radix": { magyardrog: "Ginzenggyökér", latin: "Panax ginseng", csalad: "Araliaceae", kep: "Ginseng_radix.jpg" },
+    "Hederae folium": { magyardrog: "Borostyánlevél", latin: "Hedera helix", csalad: "Araliaceae", kep: "Hederae_folium.jpg" },
+    "Hippocastani semen": { magyardrog: "Vadgesztenye mag", latin: "Aesculus hippocastanum", csalad: "Sapindaceae", kep: "Hippocastani_semen.jpg" },
+    "Juniperi galbulus": { magyardrog: "Borókabogyó", latin: "Juniperus communis", csalad: "Cupressaceae", kep: "Juniperi_galbulus.jpg" },
+    "Lavandulae flos": { magyardrog: "Levendulavirág", latin: "Lavandula angustifolia", csalad: "Lamiaceae", kep: "Lavandulae_flos.jpg" },
+    "Liquiritiae radix": { magyardrog: "Édesgyökér", latin: "Glycyrrhiza glabra", csalad: "Fabaceae", kep: "Liquiritiae_radix.jpg" },
+    "Matricariae flos": { magyardrog: "Kamillavirágzat", latin: "Matricaria chamomilla", csalad: "Asteraceae", kep: "Matricariae_flos.jpg" },
+    "Menthae crispae folium": { magyardrog: "Fodormenta levél", latin: "Mentha crispa", csalad: "Lamiaceae", kep: "Menthae_crispae_folium.jpg" },
+    "Menthae piperitae folium": { magyardrog: "Borsmenta levél", latin: "Mentha × piperita", csalad: "Lamiaceae", kep: "Menthae_piperitae_folium.jpg" },
+    "Millefolii herba": { magyardrog: "Cickafark virágos hajtás", latin: "Achillea millefolium", csalad: "Asteraceae", kep: "Millefolii_herba.jpg" },
+    "Primulae radix": { magyardrog: "Kankalingyökér", latin: "Primula veris", csalad: "Primulaceae", kep: "Primulae_radix.jpg" },
+    "Rosmarini folium": { magyardrog: "Rozmaringlevél", latin: "Rosmarinus officinalis", csalad: "Lamiaceae", kep: "Rosmarini_folium.jpg" },
+    "Salviae officinalis folium": { magyardrog: "Orvosi zsálya levél", latin: "Salvia officinalis", csalad: "Lamiaceae", kep: "Salviae_officinalis_folium.jpg" },
+    "Saponariae albae radix": { magyardrog: "Fehér szappangyökér", latin: "Saponaria officinalis", csalad: "Caryophyllaceae", kep: "Saponariae_albae_radix.jpg" },
+    "Strophanthii semen": { magyardrog: "Sztrofantusz mag", latin: "Strophanthus gratus", csalad: "Apocynaceae", kep: "Strophanthii_semen.jpg" },
+    "Thymi herba": { magyardrog: "Kakukkfű hajtás", latin: "Thymus vulgaris", csalad: "Lamiaceae", kep: "Thymi_herba.jpg" },
+    "Valerianae radix": { magyardrog: "Macskagyökér", latin: "Valeriana officinalis", csalad: "Caprifoliaceae", kep: "Valerianae_radix.jpg" }
+}
+
+	    
 const mikroKepek = [ 
     "Szklereidák__Schisandrae_chinensis_fructus.jpg",
     "Testa__Schisandrae_chinensis_fructus.jpg",
