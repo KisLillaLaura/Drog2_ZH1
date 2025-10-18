@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gyógynövény- és drogismeret I. 2. ZH</title>
+    <script src="script.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .menu, .submenu {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .submenu {
+            display: none;
+        }
+        #sketchem-container {
+            display: none;
+        }
+	#kepfelismeres-container {
+    	    display: none;
+	}
+	#szamolas-container, #tabla-container {
+    	    display: none;
+	}
+	/* Ideiglenes elrejtés */
+	#szamolasSubMenu, 
+	#szamolas-container,
+	#tabla-container, 
+	#tablaSubMenu,
+	#fitokemia_altalanos-container,
+	#fitokemia-container,
+	#fitoanalitika-container {
+    	display: none !important;
+	}
+	/* Táblázatos játékok stílusa */
+	#tabla-container, 
+	#fitokemia_altalanos-container,
+	#fitokemia-container,
+	#fitoanalitika-container {
+   	 max-width: 900px;
+   	 margin: 0 auto;
+	}
+
+	table {
+  	  width: 100%;
+ 	   margin: 20px 0;
+ 	   border-collapse: collapse;
+	}
+
+	th, td {
+ 	   padding: 12px;
+ 	   text-align: left;
+ 	   border: 1px solid #ddd;
+	}
+
+	th {
+  	  background-color: #f8f9fa;
+  	  font-weight: bold;
+	}
+
+	select {
+    	width: 100%;
+    	padding: 8px;
+   	 border-radius: 4px;
+   	 border: 1px solid #ccc;
+	}
+    </style>
+</head>
+<body>
+    <h1>Üdvözöllek a DrogI. 2.zh Játékban!</h1>
+    <p>Válassz egy feladattípust:</p>
+    
+    <div class="menu" id="mainMenu">
+        <button onclick="showSubMenu('novenyfelismeres')">Növényfelismerés</button>
+        <button onclick="showSubMenu('kepletek')">Képletek</button>
+	
+    </div>
+
+    <!-- Almenük -->
+
+    <div class="submenu" id="novenyfelismeresSubMenu">
+        <h2>Növényfelismerés</h2>
+        <button onclick="startMakroszkopikusJatek()">Makroszkópikus felismerés</button>
+        <button onclick="startMikroszkopikusJatek()">Mikroszkópikus felismerés</button>
+        <button onclick="goBack()">🔙 Vissza</button>
+    </div>
+	
+    <div class="submenu" id="kepletekSubMenu">
+        <h2>Képletek</h2>
+        <button onclick="startFormulaRecognition()">Képlet felismerés</button>
+        <button onclick="goBack()">🔙 Vissza</button>
+    </div>
+
+
+    
+	
+    <div id="kepfelismeres-container">
+    	<h2>Mi a képen látható molekula neve?</h2>
+    	<img id="molekula-kep" src="" alt="Molekula képe" style="max-width: 300px; margin: 20px auto; display: block;">
+    	<input type="text" id="name-input" placeholder="Írd be a molekula nevét">
+	<div style="margin: 15px 0;">
+    	    <label for="group-select">Molekula csoportja:</label>
+    	    <select id="group-select">
+                <option value="">Válassz csoportot...</option>
+    	    </select>
+		
+	</div>
+    	<br><br>
+    	<button onclick="checkName()">✅ Ellenőrzés</button>
+    	<button onclick="goBack()">🔙 Vissza</button>
+    	<p id="name-output"></p>
+    	<button onclick="newMoleculeRecognition()">Új molekula</button>
+    	<button onclick="retryRecognition()">Újrapróbálás</button>
+    </div>
+	
+    <div id="makroszkopikus-container" class="submenu">
+    	<h2>Makroszkópikus növényfelismerés</h2>
+    	<img id="noveny-kep" src="" alt="Növény képe" style="max-width: 400px; margin: 20px auto; display: block;">
+    	<div class="input-group">
+        	<label>Drog magyar neve:</label>
+        	<input type="text" id="magyar-drog">
+    	</div>
+  	<div class="input-group">
+        	<label>Drog latin neve:</label>
+        	<input type="text" id="latin-drog">
+	</div>
+    	<div class="input-group">
+        	<label>Növény latin neve:</label>
+        	<input type="text" id="latin-noveny">
+    	</div>
+    	<div class="input-group">
+        	<label>Növény családja latinul:</label>
+        	<input type="text" id="csalad-noveny">
+    	</div>
+    	<button onclick="checkNoveny()">✅ Ellenőrzés</button>
+    	<button onclick="goBack()">🔙 Vissza</button>
+    	<p id="noveny-eredmeny"></p>
+    	<button onclick="ujNoveny()">Új növény</button>
+    </div>
+    <!-- Mikroszkópikus felismerés konténer -->
+    
+    <div id="mikroszkopikus-container" class="submenu">
+    	<h2>Mikroszkópikus felismerés</h2>
+    	<div id="mikro-kepek"></div>
+    	<div id="mikro-valaszok">
+            <div id="mikro-feature-dropdowns"></div>
+            <div class="input-group">
+                <label>Melyik drog szövetei láthatók?</label>
+            	<select id="mikro-drog-select"></select>
+            </div>
+    	</div>
+    	<button onclick="checkMikro()">✅ Ellenőrzés</button>
+    	<button onclick="goBack()">🔙 Vissza</button>
+    	<p id="mikro-eredmeny"></p>
+    	<button onclick="ujMikroJatek()">Új játék</button>
+    </div>
+
+
+
+
+
+</body>
+</html>
