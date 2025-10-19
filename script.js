@@ -73,36 +73,26 @@ const novenyAdatok = {
 
 	    
 const mikroKepek = [ 
-    "Szklereidák__Schisandrae_chinensis_fructus.jpg",
-    "Testa__Schisandrae_chinensis_fructus.jpg",
-    "Olajtartósejt__Schisandrae_chinensis_fructus.jpg",
-    "Derékszögben_elhajló_szemcsés_fedőszőr__Meliloti_herba.jpg",
-    "Sárga_váladékot_tartalmazó_parenchimasejtek__Curcumae_longae_rhizoma.jpg",
-    "Trachea__Curcumae_longae_rhizoma.jpg",
-    "Sárga_olajtömeget_hordozó_kiválasztósejt__Curcumae_longae_rhizoma.jpg",
-    "Páfrányfarok_alakú_szőr__Agrimoniae_herba.jpg",
-    "Szklereidák__Quercus_cortex_pulvis.jpg",
-    "Rekeszes_rost__Quercus_cortex_pulvis.jpg",
-    "Rozettákat_olajcseppeket_tartalmazó_parenchima__Silybi_mariani_fructus.jpg",
-    "Szklerenchima__Silybi_mariani_fructus.jpg",
-    "Maghéj_oszlop_alakú_sejt__Silybi_mariani_fructus.jpg",
-    "Pigmentsejtek__Silybi_mariani_fructus.jpg",
-    "Parenchima__Silybi_mariani_fructus.jpg",
-    "Anomocitikus_sztómaapparátus__Solidaginis_herba.jpg",
-    "Egysoros_kúpos_fedőszőr__Solidaginis_herba.jpg",
-    "Párosfedőszőr__Solidaginis_herba.jpg",
-    "Bóbitaszőrök__Solidaginis_herba.jpg",
-    "Pollen__Solidaginis_herba.jpg",
-    "Parenchima__Frangulae_cortex_pulvis.jpg",
-    "Rekeszes_rost__Frangulae_cortex_pulvis.jpg",
-    "Parenchima__Rhei_radix_pulvis.jpg",
-    "Trachea__Rhei_radix_pulvis.jpg",
-    "Ca-oxalát_rozetta__Rhei_radix_pulvis.jpg",
-    "Oszlopos_parenchima__Sennae_folium_pulvis.jpg",
-    "Egysejtű_bibircses_kúpalakú_szőr__Sennae_folium_pulvis.jpg",
-    "Ca-oxalátkristályos_sejtsorok_rostokon__Sennae_folium_pulvis.jpg",
-    "Endocarpium_Ca-oxalát_hasábkristályokkal__Sennae_fructus_pulvis.jpg",
-    "Rost__Sennae_fructus_pulvis.jpg"
+    "antociános_csészelevél_töredék__Lavandulae_flos"
+	"antociános_szárdarab__Menthae_piperitae_folium"
+	"bibe__Matricariae_flos"
+	"csöves_virág__Matricariae_flos"
+	"derékszögben_hajlott_fedőszőrök__Thymi_herba"
+	"endospermium_vastagodott_falú_sejtekkel__Coriandri_fructus"
+	"fedőszőr__Menthae_piperitae_folium"
+	"lamiaceae_mirigyszőr__Menthae_piperitae_folium"
+	"lamiaceae_mirigyszőrök__Lavandulae_flos"
+	"lamiaceae_mirigyszőrök__Rosmarini_folium"
+	"lamiaceae_mirigyszőrők__Thymi_herba"
+	"mezokarpium__Coriandri_fructus"
+	"mirigyszőr__Marrubii_herba"
+	"olajcseppek__Coriandri_fructus"
+	"összetett_emeletes_fedőszörök_Rosmarini_folium"
+	"összetett_fedőszőr__Lavandulae_flos"
+	"összetett_fedőszőr__Marrubii_herba"
+	"pollenszemcsék__Lavandulae_flos"
+	"pollenszemcsék__Matricariae_flos"
+	"lamiaceae_mirigyszőr__Salviae_officinalis_folium"
 ];
 
 const mikroAdatok = {};
