@@ -60,7 +60,7 @@ const novenyAdatok = {
     "Liquiritiae radix": { magyardrog: "Édesgyökér", latin: "Glycyrrhiza glabra", csalad: "Fabaceae", kep: "Liquiritiae_radix.jpg" },
     "Matricariae flos": { magyardrog: "Kamillavirágzat", latin: "Matricaria chamomilla", csalad: "Asteraceae", kep: "Matricariae_flos.jpg" },
     "Menthae crispae folium": { magyardrog: "Fodormenta levél", latin: "Mentha crispa", csalad: "Lamiaceae", kep: "Menthae_crispae_folium.jpg" },
-    "Menthae piperitae folium": { magyardrog: "Borsmenta levél", latin: "Mentha × piperita", csalad: "Lamiaceae", kep: "Menthae_piperitae_folium.jpg" },
+    "Menthae piperitae folium": { magyardrog: "Borsmenta levél", latin: "Mentha piperita", csalad: "Lamiaceae", kep: "Menthae_piperitae_folium.jpg" },
     "Millefolii herba": { magyardrog: "Cickafark virágos hajtás", latin: "Achillea millefolium", csalad: "Asteraceae", kep: "Millefolii_herba.jpg" },
     "Primulae radix": { magyardrog: "Kankalingyökér", latin: "Primula veris", csalad: "Primulaceae", kep: "Primulae_radix.jpg" },
     "Rosmarini folium": { magyardrog: "Rozmaringlevél", latin: "Rosmarinus officinalis", csalad: "Lamiaceae", kep: "Rosmarini_folium.jpg" },
