@@ -73,26 +73,26 @@ const novenyAdatok = {
 
 	    
 const mikroKepek = [ 
-    "antociános_csészelevél_töredék__Lavandulae_flos"
-	"antociános_szárdarab__Menthae_piperitae_folium"
-	"bibe__Matricariae_flos"
-	"csöves_virág__Matricariae_flos"
-	"derékszögben_hajlott_fedőszőrök__Thymi_herba"
-	"endospermium_vastagodott_falú_sejtekkel__Coriandri_fructus"
-	"fedőszőr__Menthae_piperitae_folium"
-	"lamiaceae_mirigyszőr__Menthae_piperitae_folium"
-	"lamiaceae_mirigyszőrök__Lavandulae_flos"
-	"lamiaceae_mirigyszőrök__Rosmarini_folium"
-	"lamiaceae_mirigyszőrők__Thymi_herba"
-	"mezokarpium__Coriandri_fructus"
-	"mirigyszőr__Marrubii_herba"
-	"olajcseppek__Coriandri_fructus"
-	"összetett_emeletes_fedőszörök_Rosmarini_folium"
-	"összetett_fedőszőr__Lavandulae_flos"
-	"összetett_fedőszőr__Marrubii_herba"
-	"pollenszemcsék__Lavandulae_flos"
-	"pollenszemcsék__Matricariae_flos"
-	"lamiaceae_mirigyszőr__Salviae_officinalis_folium"
+    "antociános_csészelevél_töredék__Lavandulae_flos.jpg",
+	"antociános_szárdarab__Menthae_piperitae_folium.jpg",
+	"bibe__Matricariae_flos.jpg",
+	"csöves_virág__Matricariae_flos.jpg",
+	"derékszögben_hajlott_fedőszőrök__Thymi_herba.jpg",
+	"endospermium_vastagodott_falú_sejtekkel__Coriandri_fructus.jpg",
+	"fedőszőr__Menthae_piperitae_folium.jpg",
+	"lamiaceae_mirigyszőr__Menthae_piperitae_folium.jpg",
+	"lamiaceae_mirigyszőrök__Lavandulae_flos.jpg",
+	"lamiaceae_mirigyszőrök__Rosmarini_folium.jpg",
+	"lamiaceae_mirigyszőrők__Thymi_herba.jpg",
+	"mezokarpium__Coriandri_fructus.jpg",
+	"mirigyszőr__Marrubii_herba.jpg",
+	"olajcseppek__Coriandri_fructus.jpg",
+	"összetett_emeletes_fedőszörök_Rosmarini_folium.jpg",
+	"összetett_fedőszőr__Lavandulae_flos.jpg",
+	"összetett_fedőszőr__Marrubii_herba.jpg",
+	"pollenszemcsék__Lavandulae_flos.jpg",
+	"pollenszemcsék__Matricariae_flos.jpg",
+	"lamiaceae_mirigyszőr__Salviae_officinalis_folium.jpg"
 ];
 
 const mikroAdatok = {};
